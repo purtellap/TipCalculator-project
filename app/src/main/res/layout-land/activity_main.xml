@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/amt"
+        android:layout_width="@dimen/horizWidth"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginStart="@dimen/customWidth"
+        android:text="@string/amtText"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/amtIn"
+        android:layout_width="@dimen/horizWidth"
+        android:layout_height="wrap_content"
+        android:hint="@string/amtDef"
+        android:layout_marginStart="@dimen/customWidth"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/amt" />
+
+    <TextView
+        android:id="@+id/numPeople"
+        android:layout_width="@dimen/horizWidth"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginStart="@dimen/customWidth"
+        android:text="@string/peopleAmt"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/amtIn" />
+
+    <EditText
+        android:id="@+id/pplIn"
+        android:inputType="number"
+        android:hint="@string/ppDef"
+        android:layout_marginStart="@dimen/customWidth"
+        android:layout_width="@dimen/horizWidth"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/numPeople"  />
+
+    <TextView
+        android:id="@+id/tip"
+        android:text="@string/tipAmt"
+        android:layout_width="@dimen/horizWidth"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginStart="@dimen/customWidth"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pplIn"
+       />
+
+    <RadioGroup
+        android:id="@+id/RGroup"
+        android:layout_width="@dimen/horizWidth"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/customWidth"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tip"
+        >
+
+        <RadioButton
+            android:id="@+id/tenPercent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tenPercent"
+            android:layout_marginStart="@dimen/margin" />
+
+        <RadioButton
+            android:id="@+id/fifteenPercent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fifteenPercent"
+            android:layout_marginStart="@dimen/margin"/>
+
+        <RadioButton
+            android:id="@+id/twentyPercent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/twentyPercent"
+            android:layout_marginStart="@dimen/margin"/>
+
+        <RadioButton
+            android:id="@+id/custom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/customPercent"
+            android:layout_marginStart="@dimen/margin"/>
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/percentIn"
+        android:layout_width="@dimen/customWidth"
+        android:layout_height="wrap_content"
+        android:hint="@string/percentDef"
+        android:inputType="number"
+        app:layout_constraintRight_toRightOf="@id/RGroup"
+        app:layout_constraintBottom_toBottomOf="@id/RGroup"
+        />
+
+    <Button
+        android:id="@+id/calc"
+        android:layout_width="@dimen/calcWidth"
+        android:layout_height="wrap_content"
+        android:text="@string/calc"
+        android:layout_marginStart="@dimen/stupidName"
+        app:layout_constraintLeft_toRightOf="@id/amtIn"
+        app:layout_constraintBottom_toTopOf="@id/numPeople"
+        />
+
+    <TextView
+        android:id="@+id/totalAmt"
+        android:layout_width="@dimen/horizWidth"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toRightOf="@id/RGroup"
+        app:layout_constraintTop_toBottomOf="@id/calc"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginStart="@dimen/distLeft"
+        android:layout_marginBottom="@dimen/margin"/>
+
+    <TextView
+        android:id="@+id/totalTip"
+        android:layout_width="@dimen/horizWidth"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toRightOf="@id/RGroup"
+        app:layout_constraintTop_toBottomOf="@id/totalAmt"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginStart="@dimen/distLeft"
+        android:layout_marginBottom="@dimen/margin"/>
+
+    <TextView
+        android:id="@+id/totalPP"
+        android:layout_width="@dimen/horizWidth"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toRightOf="@id/RGroup"
+        app:layout_constraintTop_toBottomOf="@id/totalTip"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginStart="@dimen/distLeft"
+        android:layout_marginBottom="@dimen/margin"
+        />
+
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="@dimen/resetWidth"
+        android:layout_height="wrap_content"
+        android:text="@string/reset"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toRightOf="@id/RGroup"
+        app:layout_constraintBottom_toBottomOf="@id/RGroup"
+        android:layout_marginStart="@dimen/hundredWidth"/>
+
+</android.support.constraint.ConstraintLayout>

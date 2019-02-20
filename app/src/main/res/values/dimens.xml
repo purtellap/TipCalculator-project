@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="calcWidth">200dp</dimen>
+    <dimen name="resetWidth">150dp</dimen>
+    <dimen name="textViewHeight">30dp</dimen>
+    <dimen name="margin">15dp</dimen>
+    <dimen name="distTop">50dp</dimen>
+    <dimen name="distLeft">30dp</dimen>
+    <dimen name="customWidth">70dp</dimen>
+    <dimen name="horizWidth">300dp</dimen>
+    <dimen name="hundredWidth">108dp</dimen>
+    <dimen name="stupidName">82dp</dimen>
+
+</resources>
