@@ -1,3 +1,7 @@
+Wow factor: Made it so that the user can't input incorrect values at all.  Also spent time on making the landscape view look nice.
+
+
+
 # TipCalculator-project
 
 ## DUE: 17 Feb 2019
