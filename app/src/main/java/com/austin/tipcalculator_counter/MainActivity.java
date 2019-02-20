@@ -246,9 +246,9 @@ public class MainActivity extends AppCompatActivity {
                 numPeople = 0;
                 tipPercent = 0;
 
-                finalAmt.setVisibility(View.VISIBLE);
-                finalTip.setVisibility(View.VISIBLE);
-                finalPP.setVisibility(View.VISIBLE);
+                finalAmt.setVisibility(View.GONE);
+                finalTip.setVisibility(View.GONE);
+                finalPP.setVisibility(View.GONE);
 
                 amtValid = false;
                 pplValid = false;
